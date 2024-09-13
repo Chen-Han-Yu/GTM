@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NM4LQQ4M');</script>
+      <!-- End Google Tag Manager -->
+
+    <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-CEY3NEPX43"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-CEY3NEPX43');
+      </script>
+  </head>
+  
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NM4LQQ4M"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <h1>Content</h1>
+    
+    <mark><strong>發送到GTM</strong></mark><br>
+    <button onclick="sendData()">transactionEvent_to_DataLayer</button>
+    <script>
+      function sendData() {
+        dataLayer.push({
+          event: 'transactionEvent',
+          anyNameForYourCustomVariable: 'ReturningVisitor',
+          ecommerce:{
+              value: 7.77,
+              item_list_id: "related_products",
+              item_list_name: "Related products",
+              items: [
+                  {
+                    item_id: "FM1",
+                    item_name: "FM1_Name",
+                    affiliation: "Google Merchandise Store",
+                    coupon: "SUMMER_FUN",
+                    discount: 2.22,
+                    index: 0,
+                    item_brand: "Google",
+                    item_category: "Apparel",
+                    item_category2: "Adult",
+                    item_category3: "Shirts",
+                    item_category4: "Crew",
+                    item_category5: "Short sleeve",
+                    item_list_id: "related_products",
+                    item_list_name: "Related Products",
+                    item_variant: "green",
+                    location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+                    price: 9.99,
+                    quantity: 1
+                }, 
+                          {
+                    item_id: "FM2",
+                    item_name: "FM2_Name",
+                    affiliation: "Google",
+                    coupon: "Coupon2",
+                    discount: 2,
+                    index: 0,
+                    item_brand: "Google2",
+                    item_category: "Apparel2",
+                    item_category2: "Adult2",
+                    item_category3: "Shirts2",
+                    item_category4: "Crew2",
+                    item_category5: "Short sleeve2",
+                    item_list_id: "related_products2",
+                    item_list_name: "Related Products2",
+                    item_variant: "green2",
+                    location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo2",
+                    price: 100,
+                    quantity: 2
+              }
+            ]
+          },
+          date: new Date().getTime()
+        })
+      }
+    </script>
+
+    <button onclick="view_item_list()">view_item_list_button_to_DataLayer</button>
+    <script>
+      function view_item_list() {
+        dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object..
+        dataLayer.push({
+          event: 'view_item_list',
+          ecommerce:{
+              items: [
+                  {
+                    item_id: "FM1",
+                    item_name: "FM1_Name",
+                    affiliation: "Google Merchandise Store",
+                    coupon: "SUMMER_FUN",
+                    discount: 2.22,
+                    index: 0,
+                    item_brand: "Google",
+                    item_category: "Apparel",
+                    item_category2: "Adult",
+                    item_category3: "Shirts",
+                    item_category4: "Crew",
+                    item_category5: "Short sleeve",
+                    item_list_id: "related_products",
+                    item_list_name: "Related Products",
+                    item_variant: "green",
+                    location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+                    price: "100點+99元",
+                    quantity: 1
+                }
+            ]
+          },
+          date: new Date().getTime()
+        })
+      }
+    </script>
+
+
+<br>
+<br>
+<mark><strong>發送到RetailAPI</strong></mark><br>
+    
+    <button onclick="HomePageView_toRetailAPI()">HomePageView_toRetailAPI_without_OuterUserID</button>
+    <script>
+      function HomePageView_toRetailAPI() {
+        dataLayer.push({ cloud_retail: null });  // Clear the previous ecommerce object..
+        dataLayer.push({
+          "event": "home-page-view",
+          "cloud_retail": {
+            "pageViewId": "home",
+            "eventType": "home-page-view",
+            "visitorId": "GA1.1.315127977.1713161842",
+            "userInfo": { "userId": "20200605000077" },
+            "uri": "https://ec.fami.store/tmpo/"
+          }
+        })
+      }
+    </script><br>
+    
+    <button onclick="DetailPageView_toRetailAPI()">DetailPageView_toRetailAPI_with_userID</button>
+    <script>
+      function DetailPageView_toRetailAPI() {
+        dataLayer.push({ cloud_retail: null });  // Clear the previous ecommerce object..
+        dataLayer.push({
+          "event": "detail-page-view",
+          "cloud_retail": {
+            "eventType": "detail-page-view",
+            "visitorId": "GA1.1.315127977.1713161842",
+            "userInfo": { "userId": "20200605000077" },
+            "uri": "https://ec.fami.store/tmpo/TMPreorder/P20200030/info/WB2200000064",
+            "productDetails": [{ "product": { "id": "0203764" } }],
+            "pageViewId": "detail"
+          },
+          "userId": "20200605000077",
+          "trigger": "005989",
+          "item_id": "0203764",
+          "item_name": "【ＦＭＣ】ＦＭＣ不知春茶"
+        })
+      }
+    </script><br>
+    
+  <button onclick="AddToCart_toRetailAPI()">AddToCart_toRetailAPI</button>
+    <script>
+      function AddToCart_toRetailAPI() {
+        dataLayer.push({ cloud_retail: null });  // Clear the previous ecommerce object..
+        dataLayer.push({
+          　"event":"add-to-cart",
+          　"cloud_retail":{
+          　　"eventType":"add-to-cart",
+          　　"visitorId":"GA1.1.315127977.1713161842",
+          　　"productDetails":[
+                {"product":{"id":"0167108"},
+          　　   "quantity":1
+          　    }]
+           }
+          })
+      }
+    </script><br>
+    
+    <button onclick="Search_toRetailAPI()">Search_toRetailAPI</button>
+    <script>
+      function Search_toRetailAPI() {
+        dataLayer.push({ cloud_retail: null });  // Clear the previous ecommerce object..
+        dataLayer.push({
+          "event": "search",
+          "cloud_retail": {
+              "eventType": "search",
+              "visitorId": "GA1.1.315127977.1713161842",
+              "searchQuery": "雞腿",
+              "offset": 1,
+              "userInfo": { "userId": "20200605000077" },
+              "uri": "https://ec.fami.store/tmpo/TMPreorder/P20200030",
+              "referrerUri": "https://ec.fami.store/tmpo",
+              "attributionToken": "ABCTest",
+              "pageViewId": "preOrder",
+              "productDetails": []
+          },
+          "userId": "20200605000077",
+          "page_index": 1,
+          "trigger": "005989",
+          "value": 0
+          })
+      }
+    </script><br>
+
+    <button onclick="Purchase_toRetailAPI()">Purchase_toRetailAPI</button>
+    <script>
+      function Purchase_toRetailAPI() {
+        dataLayer.push({ cloud_retail: null });  // Clear the previous ecommerce object..
+        dataLayer.push({
+          "event": "purchase-complete",
+          "cloud_retail": {
+              "eventType": "purchase-complete",
+              "visitorId": "GA1.1.315127977.1713161842",
+              "productDetails": [{ "product": { "id": "0305564" }, "quantity": 1 }],
+              "purchaseTransaction": { "revenue": 959, "currencyCode": "TWD" },
+              "userInfo": { "userId": "20200605000077" },
+              "uri": "https://ec.fami.store/tmpo/TMPreorder/P20200030/new",
+              "pageViewId": "addCommodity"
+          },
+          "userId": "20200605000077",
+          "trigger": "005989",
+          "item_id": "0305564",
+          "item_name": "【維力】辣炸醬麵重量碗",
+          "value": 959
+        })
+      }
+    </script><br>
+<br>
+<mark><strong>發送到GA4</strong></mark><br>
+<button onclick="sendToGa4()">sendToGa4</button>
+    <script>
+      function sendToGa4() {
+        gtag("event", "begin_checkout", {
+          currency: "USD",
+          value: 7.77,
+          user_id:"A665A45920422F9D417E4867EFDC4FB8A04A1F3FFF1FA07E998E86F7F7A27AE3",
+          cno:"A665A45920422F9D417E4867EFDC4FB8A04A1F3FFF1FA07E998E86F7F7A27AE3",
+          eventTime:"2024-09-06T10:16:08+08:00",
+          coupon: "SUMMER_FUN",
+          items: [
+            {
+              item_id: "SKU_12345",
+              item_name: "Stan and Friends Tee",
+              affiliation: "Google Merchandise Store",
+              coupon: "SUMMER_FUN",
+              discount: 2.22,
+              index: 0,
+              item_brand: "Google",
+              item_category: "Apparel",
+              item_category2: "Adult",
+              item_category3: "Shirts",
+              item_category4: "Crew",
+              item_category5: "Short sleeve",
+              item_list_id: "related_products",
+              item_list_name: "Related Products",
+              item_variant: "green",
+              location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+              price: 9.99,
+              quantity: 1
+            }
+          ]
+        });
+      }
+    </script>
+    
+  </body>
+</html>
