@@ -5,32 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
       <!-- Google Tag Manager -->
+      <!-- Install Google Tag Manager的head-->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-NM4LQQ4M');</script>
+        })(window,document,'script','dataLayer','GTM-NBLX42WD');</script>
       <!-- End Google Tag Manager -->
 
-    <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-CEY3NEPX43"></script>
-      <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      
-      gtag('config', 'G-CEY3NEPX43');
-      </script>
-  </head>
-  
   <body>
     <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NM4LQQ4M"
+    <!-- Install Google Tag Manager的body-->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBLX42WD"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    
+
     <h1>Content</h1>
-    
+
     <mark><strong>發送到GTM</strong></mark><br>
     <button onclick="sendData()">transactionEvent_to_DataLayer</button>
     <script>
@@ -62,7 +53,7 @@
                     location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
                     price: 9.99,
                     quantity: 1
-                }, 
+                },
                           {
                     item_id: "FM2",
                     item_name: "FM2_Name",
@@ -129,7 +120,7 @@
 <br>
 <br>
 <mark><strong>發送到RetailAPI</strong></mark><br>
-    
+
     <button onclick="HomePageView_toRetailAPI()">HomePageView_toRetailAPI_without_OuterUserID</button>
     <script>
       function HomePageView_toRetailAPI() {
@@ -146,7 +137,7 @@
         })
       }
     </script><br>
-    
+
     <button onclick="DetailPageView_toRetailAPI()">DetailPageView_toRetailAPI_with_userID</button>
     <script>
       function DetailPageView_toRetailAPI() {
@@ -168,7 +159,7 @@
         })
       }
     </script><br>
-    
+
   <button onclick="AddToCart_toRetailAPI()">AddToCart_toRetailAPI</button>
     <script>
       function AddToCart_toRetailAPI() {
@@ -186,7 +177,7 @@
           })
       }
     </script><br>
-    
+
     <button onclick="Search_toRetailAPI()">Search_toRetailAPI</button>
     <script>
       function Search_toRetailAPI() {
@@ -273,6 +264,6 @@
         });
       }
     </script>
-    
+
   </body>
 </html>
